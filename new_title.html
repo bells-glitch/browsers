@@ -1,7 +1,21 @@
 <html>
-  <body>
-    <head>
-      <title>HELLO</title>
-    </head>
-  </body>
+<head>
+<title>Title Change</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    function changeTitle() {
+        var titles = ["Page Title 1", "Page Title 2", "Page Title 3"];
+        var currentIndex = 0;
+        setInterval(function() {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+        }, 2000);
+    }
+    changeTitle();
+});
+</script>
+</head>
+<body>
+</body>
 </html>
