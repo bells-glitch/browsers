@@ -1,21 +1,23 @@
+
 <html>
 <head>
-<title>Title Change</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    function changeTitle() {
-        var titles = ["Page Title 1", "Page Title 2", "Page Title 3"];
-        var currentIndex = 0;
-        setInterval(function() {
-            document.title = titles[currentIndex];
-            currentIndex = (currentIndex + 1) % titles.length;
-        }, 2000);
-    }
-    changeTitle();
-});
-</script>
+    <title>Tab Display</title>
 </head>
 <body>
+    <h1>Automatic Tab Information Display</h1>
+
+    <div id="tabInfoDisplay"></div>
+
+    <script>
+        // Function to retrieve and display tab information
+        function displayTabInfo() {
+            var tabTitle = document.title;
+            var tabInfoDisplay = document.getElementById("tabInfoDisplay");
+            tabInfoDisplay.innerHTML = "<p>Tab Title: " + tabTitle + "</p>";
+        }
+        window.onload = function() {
+            displayTabInfo();
+        };
+    </script>
 </body>
 </html>
